@@ -21,6 +21,15 @@ class CirclesAndroid extends Component {
     );
   };
 
+
+  animateToCompletion() {
+    NativeModules.UIManager.dispatchViewManagerCommand(
+      findNodeHandle(this),
+      UIManager.RCTCircles.Commands.animateToCompletion,
+      []
+    );
+  };
+
   render() {
     return  <NativeCirclesAndroid {...this.props} />;
   }
