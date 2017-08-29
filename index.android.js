@@ -16,7 +16,7 @@ class CirclesAndroid extends Component {
   stopSpinning() {
     NativeModules.UIManager.dispatchViewManagerCommand(
       findNodeHandle(this),
-      UIManager.RCTCircles.Commands.stopSpinning,
+      NativeModules.UIManager.RCTCircles.Commands.stopSpinning,
       []
     );
   };
@@ -25,7 +25,7 @@ class CirclesAndroid extends Component {
   animateToCompletion() {
     NativeModules.UIManager.dispatchViewManagerCommand(
       findNodeHandle(this),
-      UIManager.RCTCircles.Commands.animateToCompletion,
+      NativeModules.UIManager.RCTCircles.Commands.animateToCompletion,
       []
     );
   };
