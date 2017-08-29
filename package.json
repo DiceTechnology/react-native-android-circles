@@ -4,11 +4,11 @@
   "version": "0.3.0",
   "main": "index.android.js",
   "author": {
-    "name": "Kwaak"
+    "name": "Emanuele di Vizio"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:kwaak/react-native-android-circles.git"
+    "url": "git@github.com:emanueleDiVizio/react-native-android-circles.git"
   },
   "license": "MIT",
   "peerDependencies": {

@@ -1,15 +1,13 @@
 'use strict';
 
-var React = require('react');
-var ReactNative = require('react-native');
 
-var { NativeModules, requireNativeComponent, View } = ReactNative;
-var { PropTypes } = React;
+import { NativeModules, requireNativeComponent, View, findNodeHandle } from 'react-native';
+import React, { Component, PropTypes } from 'react';
 
-class CirclesAndroid extends React.Component {
+class CirclesAndroid extends Component {
   spin() {
     NativeModules.UIManager.dispatchViewManagerCommand(
-      React.findNodeHandle(this),
+      findNodeHandle(this),
       NativeModules.UIManager.RCTCircles.Commands.spin,
       []
     );
@@ -17,7 +15,7 @@ class CirclesAndroid extends React.Component {
 
   stopSpinning() {
     NativeModules.UIManager.dispatchViewManagerCommand(
-      React.findNodeHandle(this),
+      findNodeHandle(this),
       UIManager.RCTCircles.Commands.stopSpinning,
       []
     );
@@ -60,4 +58,4 @@ CirclesAndroid.propTypes = {
 
 var NativeCirclesAndroid = requireNativeComponent('RCTCircles', CirclesAndroid);
 
-module.exports = CirclesAndroid;
+export default CirclesAndroid
