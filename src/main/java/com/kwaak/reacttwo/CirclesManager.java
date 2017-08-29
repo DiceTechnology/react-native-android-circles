@@ -210,7 +210,7 @@ public class CirclesManager extends SimpleViewManager<CircleProgressView> {
                 return;
             }
 
-            case: ANIMATE_TO_COMPLETION: {
+            case ANIMATE_TO_COMPLETION: {
               viewPager.setValueAnimated(100, 3000);
               return;
             }
