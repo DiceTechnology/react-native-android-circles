@@ -1,5 +1,5 @@
 {
-  "name": "react-native-android-circles",
+  "name": "react-native-android-circles-fork",
   "description": "A react native android package to show a circle progress view.",
   "version": "0.3.0",
   "main": "index.android.js",
