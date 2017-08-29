@@ -19,6 +19,8 @@ public class CirclesManager extends SimpleViewManager<CircleProgressView> {
 
     public static final int COMMAND_SPIN = 1;
     public static final int COMMAND_STOPSPINNING = 2;
+    public static final int ANIMATE_TO_COMPLETION = 3;
+
     private boolean _animated;
 
     public CirclesManager() {
@@ -186,7 +188,9 @@ public class CirclesManager extends SimpleViewManager<CircleProgressView> {
                 "spin",
                 COMMAND_SPIN,
                 "stopSpinning",
-                COMMAND_STOPSPINNING);
+                COMMAND_STOPSPINNING,
+                "animateToCompletion",
+                ANIMATE_TO_COMPLETION);
     }
 
     @Override
@@ -205,6 +209,11 @@ public class CirclesManager extends SimpleViewManager<CircleProgressView> {
                 viewPager.stopSpinning();
                 return;
             }
+
+            case: ANIMATE_TO_COMPLETION: {
+              viewPager.setValueAnimated(100, 3000);
+              return;
+            }
             default:
                 throw new IllegalArgumentException(String.format(
                         "Unsupported command %d received by %s.",
@@ -213,4 +222,3 @@ public class CirclesManager extends SimpleViewManager<CircleProgressView> {
         }
     }
 }
-
