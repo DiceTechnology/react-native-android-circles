@@ -19,5 +19,8 @@
     "react-native",
     "android",
     "progress bar"
-  ]
+  ],
+  "dependencies": {
+    "prop-types": "^15.6.0"
+  }
 }
